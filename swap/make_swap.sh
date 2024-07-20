@@ -1,5 +1,8 @@
 #!/bin/bash
 
+### resources have been used
+# https://linuxize.com/post/create-a-linux-swap-file/
+
 set -euTCo pipefail
 set -x
 
