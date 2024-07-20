@@ -30,3 +30,11 @@ swapon --show
 ### test 2
 free -h
 
+### adjust swapniess 
+cat /proc/sys/vm/swappiness
+
+###
+# sysctl vm.swappiness=10
+
+### /etc/sysctl.conf
+# vm.swappiness=10
