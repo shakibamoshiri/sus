@@ -1,0 +1,4 @@
+docker.io
+auth.docker.io
+docker.com
+production.cloudflare.docker.com
