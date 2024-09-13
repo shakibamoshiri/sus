@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -euo pipefail
 set -x
 
 ###
@@ -14,12 +15,13 @@ DEBVER=$(grep 'VERSION=' /etc/os-release | grep -Eo '[a-z]+')
 DEBARCH=$(dpkg --print-architecture)
 echo "deb [signed-by=/usr/share/keyrings/glusterfs-archive-keyring.gpg] https://download.gluster.org/pub/gluster/glusterfs/LATEST/Debian/${DEBID}/${DEBARCH}/apt ${DEBVER} main" | tee /etc/apt/sources.list.d/gluster.list
 
-
 ### 
 apt-get update -y
+apt-cache madison glusterfs-server | grep 11.1
 apt-get install -y glusterfs-server
 
 ###
 systemctl start glusterd
 systemctl enable glusterd
 systemctl status glusterd
+
