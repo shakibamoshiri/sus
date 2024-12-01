@@ -4,7 +4,7 @@ set -euo pipefail
 set -x
 
 ###
-apt-get install -y gnupg2 apt-transport-https software-properties-common
+apt-get install -y gnupg2 apt-transport-https software-properties-common curl vim tree wget
 
 ###
 curl https://download.gluster.org/pub/gluster/glusterfs/10/rsa.pub | gpg --dearmor > /usr/share/keyrings/glusterfs-archive-keyring.gpg
