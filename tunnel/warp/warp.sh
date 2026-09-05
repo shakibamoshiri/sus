@@ -6,6 +6,7 @@ set -ex
 ### link
 ### https://pkg.cloudflareclient.com/
 ###
+### mtr -rnc 1 162.159.198.2
 
 ### enable wireguard kernel log
 # modprobe wireguard 
